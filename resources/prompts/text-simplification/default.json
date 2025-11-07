@@ -1,0 +1,19 @@
+{
+    "version": "1.0",
+    "name": "Text Simplification",
+    "description": "Simplifies text to a target CEFR level",
+    "template": {
+        "system": "You are an expert language teacher specializing in {targetLanguage}.",
+        "user": "Your task is to simplify the following text to CEFR level {targetLevel} for language learners.\n\nCEFR Level Guidelines:\n- A1: Basic phrases, present tense, very simple vocabulary\n- A2: Simple sentences, common past/future tenses, everyday vocabulary\n- B1: Connected text, various tenses, intermediate vocabulary\n- B2: Complex sentences, nuanced expressions, advanced vocabulary\n- C1: Sophisticated structures, idiomatic expressions, near-native vocabulary\n- C2: Native-like complexity and vocabulary\n\nSimplification Rules:\n1. Maintain the original meaning and story flow\n2. Use vocabulary and grammar appropriate for {targetLevel}\n3. Simplify sentence structures while keeping them natural\n4. Keep proper nouns and character names unchanged\n5. Preserve paragraph breaks and formatting\n6. Do not add explanations, notes, or meta-commentary\n7. Return ONLY the simplified text\n\nTarget Level: {targetLevel}\nTarget Language: {targetLanguage}\n\nOriginal Text:\n{text}\n\nSimplified Text:"
+    },
+    "variables": [
+        "text",
+        "targetLevel",
+        "targetLanguage"
+    ],
+    "metadata": {
+        "created_at": "2024-11-06",
+        "author": "LibriLingo Team",
+        "tags": ["simplification", "cefr", "language-learning"]
+    }
+}
