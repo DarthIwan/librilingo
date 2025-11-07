@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "name": "Word Explanation",
+    "description": "Provides comprehensive word explanation with translation and examples",
+    "template": {
+        "system": "You are a language learning assistant. You MUST respond with valid JSON only, no additional text.",
+        "user": "Provide a comprehensive explanation of the following word:\n\nWord: \"{word}\"\nContext: \"{context}\"\nTarget Language: {targetLanguage}\nNative Language: {nativeLanguage}\nLearner Level: {proficiencyLevel}\n\nRespond with ONLY this JSON structure (no markdown, no code blocks, no explanations):\n{\n  \"word\": \"{word}\",\n  \"translation\": \"translation to {nativeLanguage}\",\n  \"pronunciation\": \"IPA or phonetic pronunciation\",\n  \"partOfSpeech\": \"noun/verb/adjective/adverb/preposition/etc\",\n  \"definition\": \"simple definition for {proficiencyLevel} level\",\n  \"exampleSentences\": [\n    \"Example 1 in {targetLanguage}\",\n    \"Example 2 in {targetLanguage}\",\n    \"Example 3 in {targetLanguage}\"\n  ],\n  \"grammarNote\": \"grammar explanation or empty string\"\n}\n\nCRITICAL: Return ONLY the JSON object above. No markdown formatting. No code blocks. No additional text before or after."
+    },
+    "variables": [
+        "word",
+        "context",
+        "targetLanguage",
+        "nativeLanguage",
+        "proficiencyLevel"
+    ],
+    "output_format": "json",
+    "metadata": {
+        "created_at": "2024-11-06",
+        "author": "LibriLingo Team",
+        "tags": ["vocabulary", "translation", "examples"]
+    }
+}
